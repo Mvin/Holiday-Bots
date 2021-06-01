@@ -1,0 +1,823 @@
+{
+  "event_name": "🏳️‍🌈 Pride 🏳️‍🌈",
+  "db_name": "bg_pride_2021",
+  "event_color": "0xEF5148",
+  "commands": {
+    "=rank": {
+      "items":{
+        "title": "Rankings:",
+        "description": "All users who have taken part in this event."
+      }
+    },
+    "=profile": {
+      "items":{
+        "title": "Holiday Profile for:",
+        "description": "All users who have taken part in this event."
+      }
+    },
+    "=donate": {
+      "items":{
+        "title": "Donate Decorations",
+        "description": "{0}, help the BG Float move to the next level by donating some of your decorations; half of your donations contribute to your Total Score (minimum of 2 decorations needed). \n\n You have ❇️ __**{1}** Decorations__ left to donate. Use the command below to donate them. \n\n `=donate [number of decorations]`",
+        "thumbnail": "https://media.giphy.com/media/rvqW0D0PPhHOLB3eK8/giphy.gif",
+        "errors":[
+         "{0}, You do not have that many decorations to donate.",
+         "{0}, You must donate at least ❇️ **2** decorations."
+        ],
+        "success":{
+          "success-title": "Donation Successful!",
+          "description": "Congrats, {0}! You have successfully donated ❇️ __**{1}** Decorations__ to the BG Float. \n\n `=float to see the server progress`"
+        },
+        "confirm":{
+          "title": "Confirm Donation",
+          "description": "{0}, are you sure you would like to donate ❇️ __**{1}** Decorations__ to the BG Float?",
+          "emojis":[
+            "✅",
+            "❌"
+          ]
+        },
+        "cancelled":{
+          "title": "Donation Cancelled",
+          "description": "{0}, you have cancelled your donation to the BG Float."
+        }
+      }
+    },
+    "=float": {
+      "items":{
+        "title": "Float Progress",
+        "description": "🌈 Happy Pride! For this event, you are tasked with decorating the Boston Gaymers float with decorations! Here's the progress your server has made so far:\n\n> Decorations Donated: ❇️ **{0}**  \n -------------------------------------------------",
+        "tier_message": "{0} decorations needed.",
+        "c_tier_message": "~~{0} needed.~~",
+        "footer": "Donate ❇️ decorations to help the BG float progress using =donate",
+        "float_images": [
+          "https://i.imgur.com/uGxQ5HV.png",
+          "https://i.imgur.com/GuGwtx9.png",
+          "https://i.imgur.com/hcRUUm1.png",
+          "https://i.imgur.com/rJ7DAtp.png",
+          "https://i.imgur.com/XXPhtQX.png"
+        ]
+      }
+    },
+    "=event": {
+      "items": {
+        "description": "> *You never completely have your rights, one person, until you all have your rights.* --Marsha P. Johnson \n\nPride is more than just a festival we celebrate one month out of a year. It's our duty to come together and celebrate the history of LGBTQ+ and what makes us *fabulous* all year round. The **BG Pride Bot** invites you to dig into our history, so if you spot a float or two from an organization that celebrates *us*, here are some useful tips:\n\n",
+        "thumbnail": "https://media.giphy.com/media/ksDuDeTHvySzjkQxeA/giphy.gif",
+        "title": "Event Details",
+        "fields": [
+          {
+            "name": "🤖 =profile",
+            "value": "> Check on your progress, featured item and total score",
+            "inline": "False"
+          },
+          {
+            "name": "🎁 =open",
+            "value": "> Opens up a random present and gives you decorations",
+            "inline": "False"
+          },
+          {
+            "name": "💰 =donate",
+            "value": "> Donate your decorations to the BG Float",
+            "inline": "False"
+          },
+          {
+            "name": "🌈 =float",
+            "value": "> View the progress this server has made in the event",
+            "inline": "False"
+          },
+          {
+            "name": "⚔️ =inventory",
+            "value": "> View items you've collected and assign a featured item",
+            "inline": "False"
+          },
+          {
+            "name": "🛒 =shop",
+            "value": "> Opens up the shop where you can purchase BG presents",
+            "inline": "False"
+          },
+          {
+            "name": "📈 =rank",
+            "value": "> View your and other participants' rank in the event",
+            "inline": "False"
+          },
+          {
+            "name": "✨ =glitbomb",
+            "value": "> Tag a BG friend to mail them a friendly glitter bomb",
+            "inline": "False"
+          }
+        ]
+      }
+    },
+    "=throw":{
+      "items":{
+        "reads":[
+          {
+            "message": "{0}, another pride goer walks by and gives you a present. You wonder what it could be, you open it and",
+            "image":"https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/12/19/16/gif.gif?width=982&height=726&auto=webp&quality=75"
+          },
+          {
+            "message": "{0}, You get in the car with your friend who went for a glitter beard today. They sneeze",
+            "image": "https://media2.giphy.com/media/j5Vz7VqANVS6iz3xhI/giphy.gif?cid=ecf05e47a2moo5mmimuymmjg37qlv31fjurdhqddjvvmy4aa&rid=giphy.gif&ct=g"
+          },
+          {
+            "message": "{0}, surprise: you have been glitter bombed.",
+            "image": "https://media2.giphy.com/media/QULNsMmBKx0hG/giphy.gif?cid=ecf05e4761gszk91jpxk8bn7d68angcyhogytb5uant1phpf&rid=giphy.gif&ct=g"
+          },
+          {
+            "message": "Hey {0}, aren't you lucky to be glitter bombed.",
+            "image": "https://media0.giphy.com/media/Kd9IQloZWxEEU/giphy.gif?cid=ecf05e4761gszk91jpxk8bn7d68angcyhogytb5uant1phpf&rid=giphy.gif&ct=g"
+          },
+          {
+            "message": "{0}, Glitter is not as fabulous as you!",
+            "image": "https://media3.giphy.com/media/xTiTnEHBh7qapyuvwQ/giphy.gif?cid=ecf05e4761gszk91jpxk8bn7d68angcyhogytb5uant1phpf&rid=giphy.gif&ct=g"
+          },
+          {
+            "message": "Oops, {0}",
+            "image": "https://media.giphy.com/media/26ufjLj6SgqdSwSwE/giphy.gif"
+          },
+          {
+            "message": "I know you're gonna love this, {0}",
+            "image": "https://media.giphy.com/media/RkG1FF2PjlBvaN4rct/giphy.gif"
+          },
+          {
+            "message": "Welcome to party city {0}!",
+            "image": "https://media.giphy.com/media/26BkNItrjPoIhB4Bi/giphy.gif"
+          },
+          {
+            "message": "A direct hit, against {0}!",
+            "image": "https://media.giphy.com/media/L4634wtS5dcDY5mrZC/giphy.gif"
+          },
+          {
+            "message": "{0}, how are you gonna get *this* off?",
+            "image": "https://media.giphy.com/media/8zcg4BB5NKQ5W/giphy.gif"
+          }
+        ],
+        "footer": "Glitbomb-1",
+        "image": "https://media.giphy.com/media/DINflrk5m8cIfbIooG/giphy.gif",
+        "loading": "✨ Sending glitter bomb",
+        "title": "✨ Glitbomb Sent!",
+        "errors": [
+          "You can't glitbomb yourself!",
+          "You don't have glitbombs!",
+          "You need to mention a user to glitbomb."
+        ]
+      }
+    },
+    "=open":{
+      "items":{
+        "message":{
+
+        },
+        "loading": "🎁 Opening your present",
+        "title": "🎁 Your present rewards:",
+        "errors":[
+          "You don't have any presents! You can get presents by particpating in the floats that arrive."
+        ]
+      }
+    },
+    "=spawn":{
+      "items":{
+        "title": "A Float has appeared",
+        "spawn-footer": "Potential Rewards: \n3 💵 for first correct, 2 💵 for correct reaction, and 1 💵 for participants"
+      }
+    },
+    "=die":{
+      "items": {
+        "types":[
+          {
+            "type": "no winners",
+            "title": "The float has left",
+            "message": "No one was able to answer the trivia question correctly on time! Try to react next time to win presents."
+          },
+          {
+            "type": "winners",
+            "title": "The float has left",
+            "message": "Congrats! You've answered the float's trivia question and are awarded {0} present(s)."
+          }
+        ]
+      }
+    },
+    "=victory":{
+      "title": "🏳️‍🌈 Congrats!",
+      "description": "You were the first person to answer the trivia question correctly!\nDon't forget to open your present for rewards."
+    },
+    "=shop": {
+      "items": {
+        "title": "BG Shop",
+        "thumbnail": "https://media.giphy.com/media/VCnSL3sktUAFdnGpoU/giphy.gif",
+        "description": "{0}, welcome to the BG Shop! This is your one-stop shop to purchase Boston Gaymers presents using the decorations you own. Rewards include BG items and more.\n\nUse `=shop [number of presents]` to buy your presents. Make sure you have enough decorations to complete your purchase!\n> (e.g. `=shop 1`)",
+        "fields":[
+          {
+            "name": "❇️ Decorations Owned",
+            "value": "{0}",
+            "inline": "False"
+          },
+          {
+            "name": "🎁 Present Cost",
+            "value": "{0} decorations/present",
+            "inline": "False"
+          }
+        ],
+        "cost": 20,
+        "errors":[
+          "{0}, you must purchase at least one present.",
+          "{0}, you don't have enough decorations to purchase that many presents!"
+        ],
+        "confirm":{
+          "title": "Confirm Purchase",
+          "description": "{0}, are you sure you would like to buy 🎁 __**{1}**__ Present(s) which will cost you ❇️ __**{2}** Decorations__?",
+          "emojis":[
+            "✅",
+            "❌"
+          ]
+        },
+        "cancelled":{
+          "title": "Purchase Cancelled",
+          "description": "{0}, you have cancelled your purchase of BG presents."
+        },
+        "success":{
+          "success-title": "Purchase Successful!",
+          "description": "Congrats, {0}! You have successfully bought 🎁 __**{1}**__ Present(s) which cost you ❇️ __**{2}** Decorations__. \n\n `=open to get your rewards`"
+        }
+      }
+    },
+    "=inventory": {
+      "items": {
+        "title": "Your Inventory ({0}/2)",
+        "thumbnail": "https://media.giphy.com/media/3ohze0TTGoLdMLiI4U/giphy.gif",
+        "description": [
+          "{0}, welcome to your inventory page! Here you will find a list of the items you've collected from various floats. You can also assign your __Featured Item__ here.\n\n",
+          "{0}, use the command below to set a featured item on your profile\n\n> `=inventory [name of item]`"
+        ],
+        "success": {
+          "message": "{0}, `{1}` was added as the featured item on your profile.",
+          "title": "Success!"
+        },
+        "errors": [
+         "You don't have that item, or it was not found." 
+        ]
+      }
+    }
+  },
+  "config":{
+    "spawn": {
+      "name": "Float",
+      "spawn_time": 15,
+      "min_between_spawns": 5,
+      "min_messages": 500000,
+      "max_messages": 5000001
+    },
+    "decorations":{
+      "max": 5,
+      "min": 1,
+      "name": "Decorations",
+      "emoji": "❇️"
+    },
+    "arrows": {
+      "max": 3,
+      "min": 0,
+      "name": "Glitbombs",
+      "emoji": "✨"
+    },
+    "points":{
+      "winner": 3,
+      "correct": 2,
+      "participant": 1,
+      "min": 0,
+      "max": 2,
+      "name": "Points",
+      "emoji": "💵"
+    },
+    "float":{
+      "tiers": [100, 350, 850, 1500],
+      "gift": 5
+    },
+    "rarity": {
+     "50": "Common",
+     "10": "Rare",
+     "2": "Fabulous"
+    },
+    "items": {
+      "name": "Item",
+      "emoji": "⚔️"
+    },
+    "presents": {
+      "number": 1
+    }
+  },
+  "floats":[
+      {
+        "name": "Boston Gaymers",
+        "logo": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/51861142_2225090391039093_5696338957734772736_n.png?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=DMHa8Sd_0EMAX-eore8&_nc_ht=scontent-bos3-1.xx&oh=f83a242a1ebab5e430f62edf8cef36d7&oe=60C2EFCC",
+        "loot":[
+            {
+               "name":"The BG Controller of Perfect Aim",
+               "image": "https://i.imgur.com/uE18mo0.png",
+               "rarity":2
+            },
+            {
+               "name":"The Dice of Perfect Rolls",
+               "image": "https://i.imgur.com/rJy2nMF.png",
+               "rarity":2
+            },
+            {
+               "name":"Enby Microphone",
+               "image": "https://i.imgur.com/gDpNChW.png",
+               "rarity":10
+            },
+            {
+               "name":"Lesbian Streaming Mic",
+               "image": "https://i.imgur.com/hHgZS5Z.png",
+               "rarity":10
+            },
+            {
+               "name":"Bisexual Cape",
+               "image": "https://i.imgur.com/HbVl7li.png",
+               "rarity":10
+            },
+            {
+               "name":"Green BG Shirt",
+               "image": "https://i.imgur.com/TT55C8B.png",
+               "rarity":50
+            },
+            {
+               "name":"Purple Sword",
+               "image": "https://i.imgur.com/AzlVHtZ.png",
+               "rarity":50
+            }
+         ]
+      },
+      {
+         "name":"BAGLY",
+         "description":"The Boston Alliance of LGBTQ+ Youth ([BAGLY](https://www.bagly.org/)) was formed in 1980 and is a youth-led, adult-supported organization committed to social justice, and creating, sustaining and advocating for programs, policies and services for the LGBTQ+ youth community.",
+         "website":"https://www.bagly.org/",
+         "picture":"https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/100100790_4098886876788190_574944143516631040_n.png?_nc_cat=107&ccb=1-3&_nc_sid=730e14&_nc_ohc=0r7yM_MB08IAX8iONeh&_nc_ht=scontent-bos3-1.xx&oh=b98da2d5a1dfebd0db7b87b2047d9494&oe=60C22A13",
+         "logo": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.18169-9/10371902_977009718995848_7120600992285401974_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=JyBvvrJgyhoAX_UA685&_nc_ht=scontent-bos3-1.xx&oh=c95e7eda84ce609d66d7b8c28333b13c&oe=60C1272D",
+         "emojis":[
+            ":polysexual_flag:",
+            ":pansexual_flag:",
+            ":nonbinary:",
+            ":asexual_flag:"
+         ],
+         "options":[
+            {
+               "name":"BAGLY asks you to show your pride for this float by choosing the right reaction based on the following trivia question:\n\n*> Which of these flags represents Polisexuality?*",
+               "emoji":":polysexual_flag:"
+            },
+            {
+               "name":"In order to support BAGLY's float, choose the right reaction based on the following question:\n\n*> Which one of these flags is the Pansexual flag?*",
+               "emoji":":pansexual_flag:"
+            }
+         ],
+         "loot":[
+            {
+               "name":"Earmuffs of Enby",
+               "image": "https://i.imgur.com/qjnuNFq.png",
+               "rarity":2
+            },
+            {
+               "name":"Asexual Microphone",
+               "image": "https://i.imgur.com/Yap9j77.png",
+               "rarity":10
+            },
+            {
+               "name":"Enby Cape",
+               "image": "https://i.imgur.com/Wf8eTZV.png",
+               "rarity":10
+            },
+            {
+               "name":"Yellow Shield",
+               "image": "https://i.imgur.com/v5UJHrC.png",
+               "rarity":50
+            },
+            {
+               "name":"Red Circlet",
+               "image": "https://i.imgur.com/In1XJBU.png",
+               "rarity":50
+            }
+         ]
+      },
+      {
+         "name":"Transgender Emergency Fund",
+         "description":"Founded in 2008, by Jesse Pack later joined by Chastity Bowick, the [Transgender Emergency Fund](https://transemergencyfund.org/) is the only organization dedicated to supporting low income and homeless Transgender individuals in Massachusetts.",
+         "website":"https://transemergencyfund.org/",
+         "picture":"https://img1.wsimg.com/isteam/ip/8f959c23-e569-40e7-8b09-5881c9ac7405/RainbowTimes.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:388,h:194,cg:true",
+         "logo": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/46110197_2025927610783677_202889818361823232_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=174925&_nc_ohc=LItj-CVhjI0AX-ziSw-&_nc_ht=scontent-bos3-1.xx&oh=13e04ff3e8ad0d2c9f8b794156fde13f&oe=60C18825",
+         "emojis":[
+            ":polysexual_flag:",
+            ":pansexual_flag:",
+            ":nonbinary:",
+            ":asexual_flag:"
+         ],
+         "options":[
+            {
+               "name":"Transgender Emergency Fund of MA asks you to show your pride for this float by choosing the right reaction based on the following trivia question:\n\n*> Which of these flags represents Asexuality?*",
+               "emoji":":asexual_flag:"
+            },
+            {
+               "name":"In order to support TEF's float, choose the right reaction based on the following question:\n\n*> Which one of these flags is the Non-Binary flag?*",
+               "emoji":":nonbinary:"
+            }
+         ],
+         "loot":[
+            {
+               "name":"Shield of Trans Rights",
+               "image": "https://i.imgur.com/5dOSDQo.png",
+               "rarity":2
+            },
+            {
+               "name":"Intersex Streaming Mic",
+               "image": "https://i.imgur.com/UYibE0w.png",
+               "rarity":10
+            },
+            {
+               "name":"Trans Cape",
+               "image": "https://i.imgur.com/oI0RaPS.png",
+               "rarity":10
+            },
+            {
+               "name":"Purple Circlet",
+               "image": "https://i.imgur.com/LNcFyuw.png",
+               "rarity":50
+            },
+            {
+               "name":"Orange Sword",
+               "image": "https://i.imgur.com/M2T2rYF.png",
+               "rarity":50
+            }
+         ]
+      },
+      {
+        "name": "MassEquality",
+        "description": "[MassEquality](https://massequality.org/) is the leading statewide grassroots organization advocating for equal rights and LGBTQIA+ youth through education in Massachusetts.",
+        "website": "https://massequality.org/",
+        "picture": "https://massequality.org/wp-content/uploads/2019/10/10494827_10152462128563820_157580437981477804_n.png",
+        "logo": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.18169-9/25032_338402368819_1155856_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=rK5V1Y45vvwAX_TC4u0&_nc_ht=scontent-bos3-1.xx&oh=0ac137b0eae808037dd683d801fd3cf7&oe=60C3D20C",
+        "emojis": [
+          "7️⃣",
+          "8️⃣",
+          "9️⃣",
+          "🔟"
+        ],
+        "options": [
+          {
+            "name": "In order to support MassEquality's float, choose the right reaction based on the following trivia question:\n\n*> The Stonewall Riots began on June 28, 196__x__.*",
+            "emoji": "9️⃣"
+          },
+          {
+            "name": "Support MassEquality's float by choosing the correct reaction to the following herstery question:\n\n*> How many contestants were there on RuPaul's Drag Race season 1?*",
+            "emoji": "9️⃣"
+          },
+          {
+            "name": "MassEquality asks you to show your pride for this float by choosing the right reaction based on the following trivia question:\n\n*> In June of 201__x__, Philadelphia adopted a revised version of the Pride flag that adds black and brown stripes to the top of the standard six-color flag to draw attention to issues of POC within the LGBTQ+ community.*",
+            "emoji": "7️⃣"
+          },
+          {
+            "name": "MassEquality asks you to show your pride for this float by choosing the right reaction based on the following trivia question:\n\n*> Aquaria was the winner of RuPaul's Drag Race Season __x__.*",
+            "emoji": "🔟"
+          }
+        ],
+        "loot":[
+          {
+            "name": "Wings of Equality",
+            "image": "https://i.imgur.com/Bvmj3pB.png",
+            "rarity": 2
+          },
+          {
+            "name": "Asexual Streaming Mic",
+            "image": "https://i.imgur.com/TNJVz1z.png",
+            "rarity": 10
+          },
+          {
+            "name": "Lesbian Cape",
+            "image": "https://i.imgur.com/I0UuBDc.png",
+            "rarity": 10
+          },
+          {
+            "name": "Green Sword",
+            "image": "https://i.imgur.com/71I6ZSf.png",
+            "rarity": 50
+          },
+          {
+            "name": "Red Shield",
+            "image": "https://i.imgur.com/pE5Vaeh.png",
+            "rarity": 50
+          }
+        ]
+      },
+      {
+        "name": "PFLAG",
+        "description": "Founded in 1973, [PFLAG](https://gbpflag.org/) is the first and largest organization for parents of lesbian, gay, bisexual, transgender, and queer people.",
+        "website": "https://gbpflag.org/",
+        "picture": "https://gbpflag.org/wp-content/uploads/InspireLoveRally.jpg",
+        "logo": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.18169-9/381783_507703019248535_2127236220_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=MZuaHOd-dRcAX9v1dbV&_nc_ht=scontent-bos3-1.xx&oh=7a528a621993e1202c4fb9af265a7d3a&oe=60C2A7DD",
+        "emojis":[
+          "🇹",
+          "🇫"
+        ],
+        "options":[
+          {
+            "name": "If you want to support the GBPFLAG float, react correctly to the following statement with either True or False:\n\n*> The first state in the U.S. to allow non-binary gender marker on state IDs and driver's licenses was Oregon.*",
+            "emoji": "🇹"
+          },
+          {
+            "name": "Show your pride for the Mass Bears and Cubs float by reacting correctly with either True or Flase to the following statement:\n\n*> Laverne Cox was the second openly trans person ever to be nominated for an Emmy award.*",
+            "emoji": "🇫"
+          },
+          {
+            "name": "Show your pride for the Mass Bears and Cubs float by reacting correctly with either True or Flase to the following statement:\n\n*> The country that holds the record for the world's largest Pride parade is Brazil.*",
+            "emoji": "🇹"
+          }
+        ],
+        "loot":[
+          {
+            "name": "The FLAG of Acceptance",
+            "image": "https://i.imgur.com/IJirHId.png",
+            "rarity":2
+          },
+          {
+            "name": "Gay Microphone",
+            "image": "https://i.imgur.com/fod36HQ.png",
+            "rarity":10
+          },
+          {
+            "name": "Intersex Cape",
+            "image": "https://i.imgur.com/kS0201g.png",
+            "rarity":10
+          },
+          {
+            "name": "Blue Circlet",
+            "image": "https://i.imgur.com/PaJ2DFX.png",
+            "rarity":50
+          },
+          {
+            "name": "Green Shield",
+            "image": "https://i.imgur.com/lgUcDqI.png",
+            "rarity":50
+          }
+        ]
+      },
+      {
+        "name": "GLAAD",
+        "description": "[GLAAD](https://www.glaad.org/) was formed by a group of journlaists and writers in 1985 in response to the media's grossly defamatory and sensationalized HIV and AIDS coverage. As a dynamic media force, GLAAD tackles tough issues to shape the narrative and provoke dialogue that leads to cultural change.",
+        "website": "https://www.glaad.org/",
+        "picture": "https://www.glaad.org/sites/default/files/styles/750px/public/images/2017-06/GLAADPrideNYC-180_5.jpg",
+        "logo": "https://scontent-bos3-1.xx.fbcdn.net/v/t31.18172-8/14560004_10155410940348840_9044515363665512629_o.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=yqEyoRFPnGAAX8cZn_V&_nc_ht=scontent-bos3-1.xx&oh=52df3ed86d5dce8398e9118977755ecf&oe=60C27B66",
+        "emojis":[
+          "🇦",
+          "🇧",
+          "🇨"
+        ],
+        "options":[
+          {
+            "name": "In order to support GLAAD's float, choose the right reaction for this multiple choice question:\n\n*> Which popular TV show has the largest cast of transgender actors in television history?*\n🇦 Orange is the New Black\n🇧 Pose\n🇨 Transparent",
+            "emoji": "🇧"
+          },
+          {
+            "name": "Show your support for the GLAAD float by choosing the correct reaction to this multiple choice question:\n\n*> What is the name of David's love interest on Schitt's Creek?*\n🇦 Matt\n🇧 Josh\n🇨 Patrick",
+            "emoji": "🇨"
+          },
+          {
+            "name": "Support the GLAAD float by choosing the correct reaction for this multiple choice question:\n\n*> The first openly gay Black man to win an Emmy for Lead Actor is:*\n🇦 Jeremy O. Harris\n🇧 Billy Porter\n🇨 Tituss Burgess",
+            "emoji":"🇧"
+          },
+          {
+            "name": "Support the GLAAD float by choosing the correct reaction for this multiple choice question:\n\n*> The original Pride flag, created in 1978, included three colors that no longer appear on the flag as it exists today. What were they?*\n🇦 Dark Red, Turquoise and Silver\n🇧 Pink, Gold and Silver\n🇨 Pink, Turquoise and Indigo",
+            "emoji":"🇨"
+          }
+        ],
+        "loot":[
+          {
+            "name": "Golden GLAAD Award",
+            "image": "https://i.imgur.com/sSJB7sf.png",
+            "rarity":2
+          },
+          {
+            "name": "Lesbian Microphone",
+            "image": "https://i.imgur.com/FgOvDT3.png",
+            "rarity":10
+          },
+          {
+            "name": "Trans Streaming Mic",
+            "image": "https://i.imgur.com/Cb8Kebg.png",
+            "rarity":10
+          },
+          {
+            "name": "Yellow Sword",
+            "image": "https://i.imgur.com/UzTknOn.png",
+            "rarity":50
+          },
+          {
+            "name": "Purple Shield",
+            "image": "https://i.imgur.com/LfNxP3p.png",
+            "rarity":50
+          }
+        ]
+      },
+      {
+        "name": "Mass Bears and Cubs",
+        "description": "[Mass Bears and Cubs](https://www.massbearsandcubs.com/) is a 501(c)3 non-profit organization that follows in the footsteps of a number of predecessor Bear groups including Mass Bearz. They hold the Mr. Boston Bear Competition, the annual holiday toy drive, the summer Boston Harbor Cruise, and other community service events.",
+        "website": "https://www.massbearsandcubs.com/",
+        "picture": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/103949285_2688688334699554_3705957164674045526_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_ohc=UuuUkzVS00EAX--g04u&_nc_ht=scontent-bos3-1.xx&oh=1997ffc36caf96281cfb105bf771232f&oe=60C08DFE",
+        "logo": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/67823534_2427016187533438_383794618258423808_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=gbAZ_rYUiqYAX9ONbpi&_nc_ht=scontent-bos3-1.xx&oh=96e4dcd5af75f679ce27a1469793f4e2&oe=60C2DE81",
+        "emojis":[
+          "🇹",
+          "🇫"
+        ],
+        "options":[
+          {
+            "name": "Show your pride for the Mass Bears and Cubs float by reacting correctly with either True or Flase to the following statement:\n\n*> The word 'Lesbian' is derived from the home of Greek poet Sappho who lived around 600 B.C. in the island of Lesbos in the Aegean Sea and wrote simple, passionate poems about her love for women.*",
+            "emoji": "🇹"
+          },
+          {
+            "name": "If you want to support the Mass Bears and Cubs float, react correctly to the following statement with either True or False:\n\n*> The first state in the U.S. to allow non-binary gender marker on state IDs and driver's licenses was Oregon.*",
+            "emoji": "🇹"
+          },
+          {
+            "name": "Show your pride for the Mass Bears and Cubs float by reacting correctly with either True or Flase to the following statement:\n\n*> Laverne Cox was the second openly trans person ever to be nominated for an Emmy award.*",
+            "emoji": "🇫"
+          }
+        ],
+        "loot":[
+          {
+            "name": "Bearly There Tank Top",
+            "image": "https://i.imgur.com/U7Jyv6B.png",
+            "rarity":2
+          },
+          {
+            "name": "Intersex Microphone",
+            "image": "https://i.imgur.com/7K43rZP.png",
+            "rarity":10
+          },
+          {
+            "name": "Gay Cape",
+            "image": "https://i.imgur.com/9kKAdcO.pngg",
+            "rarity":10
+          },
+          {
+            "name": "Orange Shield",
+            "image": "https://i.imgur.com/25eLJKY.png",
+            "rarity":50
+          },
+          {
+            "name": "Green Circlet",
+            "image": "https://i.imgur.com/36RkmxC.png",
+            "rarity":50
+          }
+        ]
+      },
+      {
+        "name": "The Alley Bar",
+        "description": "[The Alley Bar](http://thealleybar.com/) is one of the most popular LGBTQ+ bars in Boston, known for hosting RuPaul Drag Race viewing parties as well as popular events for Boston Gaymers, including PAX After-Parties and regular game nights. Located at 14 PI Alley in the heart of Boston, The Alley Bar first opened in 2003 and is one of the few unabashedly queer spaces in town.",
+        "website": "http://thealleybar.com/",
+        "picture": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/88276931_2505095409705255_1470155202202959872_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=LGru0VqcWA4AX9hkZAa&_nc_ht=scontent-bos3-1.xx&oh=aa3cf8663ef5841306ff2c6d49962b39&oe=60C29507",
+        "logo": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/34642201_1790645214389358_1497005417887170560_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=J5YEnOjcFGgAX_7_zFT&_nc_ht=scontent-bos3-1.xx&oh=49fba9a7da263a994807cc628f88573c&oe=60C07458",
+        "emojis":[
+          "👑",
+          "🎉",
+          "🤸"
+        ],
+        "options":[
+          {
+            "name": "Show your pride for the Alley Bar float by choosing the correct reaction to this trivia question:\n\n*> Which popular US sitcom aired the first lesbian wedding on TV?*\n\n👑: Will & Grace | 🎉: Friends |🤸: Modern Family",
+            "emoji": "🎉"
+          },
+          {
+            "name": "In order to support The Alley Bar's float, answer the following multiple choice question by reacting with the correct emoji:\n\n*> When was the red ribbon (the solidarity symbol for people living with HIV/AIDS) introduced?*\n👑: 1991 | 🎉: 2012 | 🤸: 1989",
+            "emoji": "👑"
+          },
+          {
+            "name": "In order to support The Alley Bar's float, answer the following multiple choice question by reacting with the correct emoji:\n\n*> What was the name of the radical queer organization founded by New York City transgender activists Marsha P. Johnson and Sylvia Rivera in 1970?*\n👑: ACT-UP | 🎉: S.T.A.R. | 🤸: GAY LIBERATION FRONT",
+            "emoji": "🎉"
+          }
+        ],
+        "loot":[
+          {
+            "name": "Bottomless Fruity Cocktail",
+            "image": "https://i.imgur.com/UGY9Vdk.png",
+            "rarity":2
+          },
+          {
+            "name": "Enby Streaming Mic",
+            "image": "https://i.imgur.com/Ue79ZJI.png",
+            "rarity":10
+          },
+          {
+            "name": "Asexual Cape",
+            "image": "https://i.imgur.com/wRvwek3.png",
+            "rarity":10
+          },
+          {
+            "name": "Red BG Shirt",
+            "image": "https://i.imgur.com/lF2bsta.png",
+            "rarity":50
+          },
+          {
+            "name": "Blue Sword",
+            "image": "https://i.imgur.com/sPzDrFx.png",
+            "rarity":50
+          }
+        ]
+      },
+      {
+        "name": "Wicked Queer",
+        "description": "[Wicked Queer](https://www.wickedqueer.org/), Boston's LGBTQ+ Film Festival, is the fourth oldest LGBTQ+ film festival in North America and the largest LGBTQ+ media event in New England. The Festival has been hosted by the Museum of Fine Arts, Boston since 1992 and, as of 2012, is presented across the greater Boston Area.",
+        "website": "https://www.wickedqueer.org/",
+        "picture": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/71259735_10156290241950759_4844210230663315456_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=9267fe&_nc_ohc=0Zr5pV43pX4AX-Td6GE&_nc_ht=scontent-bos3-1.xx&oh=db0ee92450d414e1c2d5beed93f6c7b1&oe=60C0F90E",
+        "logo": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/138511404_10157499086265759_8736528931908505112_n.png?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=pMM4QA6pCxIAX930Pft&_nc_ht=scontent-bos3-1.xx&oh=2726d2108fef376db2b55e0293c67591&oe=60C1CE2E",
+        "emojis":[
+          "🇹",
+          "🇫"
+        ],
+        "options":[
+          {
+            "name": "Show your pride for the Wicked Queer float by reacing correctly to this trivia question with either True or False:\n\n*> The Stonewall Inn was not New York's only gay bar in 1969.*",
+            "emoji": "🇹"
+          },
+          {
+            "name": "Show your pride for the WQ float by reacting with either True or False:\n\n*> The popular primetime comedy show Will & Grace (1998-2006) won a total of 16 Emmy awards after its first run ended.*",
+            "emoji": "🇹"
+          }
+        ],
+        "loot":[
+          {
+            "name": "Wicked Crown of Queer",
+            "image": "https://i.imgur.com/4ku6Xgr.png",
+            "rarity":2
+          },
+          {
+            "name": "Trans Microphone",
+            "image": "https://i.imgur.com/DlkOLHu.png",
+            "rarity":10
+          },
+          {
+            "name": "Bisexual Microphone",
+            "image": "https://i.imgur.com/CjG1za0.png",
+            "rarity":10
+          },
+          {
+            "name": "Yellow Circlet",
+            "image": "https://i.imgur.com/XEgOfZj.png",
+            "rarity":50
+          },
+          {
+            "name": "Blue Shield",
+            "image": "https://i.imgur.com/RyuWrX1.png",
+            "rarity":50
+          }
+        ]
+      },
+      {
+        "name": "Stonewall Sports Boston",
+        "description": "[Stonewall Sports Boston](https://stonewallboston.leagueapps.com/) is a chapter of Stonewall Sports founded in 2017 as an LGBTQ+ and Ally not-for-profit sports league that developed a well-connected and diverse community through organized competition and social or fundraising events.",
+        "website": "https://stonewallboston.leagueapps.com/",
+        "picture": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/162466218_103602395153639_5005318050879581166_n.png?_nc_cat=103&ccb=1-3&_nc_sid=e3f864&_nc_ohc=GtkICnxAkm8AX_A1tb9&_nc_ht=scontent-bos3-1.xx&oh=2129460f092ece9fc5f9f9ca14796ea4&oe=60C181FA",
+        "logo": "https://scontent-bos3-1.cdninstagram.com/v/t51.2885-19/s150x150/129455422_382335496315422_7645024891172847208_n.jpg?tp=1&_nc_ht=scontent-bos3-1.cdninstagram.com&_nc_ohc=3FSQrrEhIoQAX_DpeWd&edm=AHG7ALcBAAAA&ccb=7-4&oh=508f55e898800986667976223fb11a16&oe=60C07BD5&_nc_sid=5cbaad",
+        "emojis":[
+          "1️⃣",
+          "2️⃣",
+          "3️⃣"
+        ],
+        "options":[
+          {
+            "name": "Stonewall Sports Boston asks you to show your pride for their float by answering the following multiple choice question correctly:\n\n*> The first openly gay Black man to win an Emmy for Lead Actor is:*\n1️⃣ Jeremy O. Harris\n2️⃣ Billy Porter\n3️⃣ Tituss Burgess",
+            "emoji": "2️⃣"
+          },
+          {
+            "name": "To support the Stonewall Sports Boston float, react with the correct reaction to the following multiple choice question:\n\n*> International Nonbinary Day is celebrated on which of these days?*\n1️⃣ July 14th\n2️⃣ August 20th\n3️⃣ December 2nd",
+            "emoji": "1️⃣"
+          },
+          {
+            "name": "To support the Stonewall Sports Boston float, react with the correct reaction to the following multiple choice question:\n\n*> Boston Gaymers hosted a 24-hour Holiday Charity Stream last December that raised over $3700 for which of the following charities?*\n1️⃣ Transgender Emergency Fund\n2️⃣ BAGLY\n3️⃣ MassEquality",
+            "emoji": "3️⃣"
+          }
+        ],
+        "loot":[
+          {
+            "name": "Fabulous Foil (Fencing Sword)",
+            "image": "https://i.imgur.com/0LRUWNq.png",
+            "rarity":2
+          },
+          {
+            "name": "Bisexual Streaming Mic",
+            "image": "https://i.imgur.com/uREEBu1.png",
+            "rarity":10
+          },
+          {
+            "name": "Gay Streaming Mic",
+            "image": "https://i.imgur.com/sFr3dvO.png",
+            "rarity":10
+          },
+          {
+            "name": "Red Sword",
+            "image": "https://i.imgur.com/Y8JG2wa.png",
+            "rarity":50
+          },
+          {
+            "name": "Purple BG Shirt",
+            "image": "https://i.imgur.com/14iNWwr.png",
+            "rarity":50
+          }
+        ]
+      }
+   ]
+}
